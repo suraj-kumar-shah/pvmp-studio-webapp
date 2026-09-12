@@ -1,32 +1,32 @@
 export const SERVICES = [
   {
     id: 'service-wedding-photography',
-    title: 'Wedding Photography',
-    subtitle: 'Full Mandap & Ritual Photo Shoot',
+    title: 'Weddings Shoot',
+    subtitle: 'Complete Wedding & Ritual Photo Shoot',
     iconName: 'Camera',
-    description: 'Complete photo coverage of your wedding ceremonies, mandap rituals, family group photos, and couple portraits in high quality.',
+    description: 'Complete photo and video coverage of wedding ceremonies, mandap rituals, family portraits, and varmala with professional crew.',
     coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
     deliverables: [
-      '2 Professional Photographers + Studio Lights',
-      'All original high-quality photos on cloud & USB',
-      'Quick sneak peek photos within 48 hours',
-      'Full printing rights without watermark'
+      'Professional Wedding Photographers + High-End Lighting',
+      'All original high-quality photos on USB & Cloud',
+      'Quick photo preview delivery within 48 hours',
+      'Full printing and sharing rights'
     ],
     startingPrice: 25000,
     turnaround: '2-3 Weeks',
-    badge: 'Most Popular'
+    badge: 'Popular'
   },
   {
     id: 'service-prewedding-love-stories',
-    title: 'Pre-Wedding Shoot & Video',
-    subtitle: 'Couple Photos & Romantic Song Video',
+    title: 'Pre-Wedding Shoot',
+    subtitle: 'Outdoor Couple Photos & Romantic Video',
     iconName: 'Heart',
-    description: 'Outdoor couple photo shoot with drone views, romantic song teaser, and scenic location portraits before the wedding.',
+    description: 'Scenic outdoor couple photo shoot with romantic music video, drone aerial shots, and creative concept portraits before the wedding.',
     coverImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
     deliverables: [
-      'Scenic outdoor location shoot (up to 3 dress changes)',
-      '4K cinematic video teaser with romantic music',
-      '50+ edited photo frames for wedding invitation',
+      'Scenic outdoor location shoot (multiple outfit changes)',
+      'Cinematic teaser film with romantic background music',
+      'Edited high-resolution couple portraits for invitations',
       'Drone aerial camera shots included'
     ],
     startingPrice: 15000,
@@ -34,25 +34,59 @@ export const SERVICES = [
     badge: 'Trending'
   },
   {
-    id: 'service-cinematography-documentary',
-    title: '4K Wedding Video & Drone',
-    subtitle: 'Full HD Wedding Movie & Highlights',
-    iconName: 'Film',
-    description: 'Complete wedding video recording with drone shots, clear mic audio for rituals, teaser video, and full family wedding film.',
+    id: 'service-birthday-parties',
+    title: 'Birthday Party',
+    subtitle: 'Celebration & Birthday Party Photography',
+    iconName: 'Sparkles',
+    description: 'Vibrant photo and video coverage for birthday celebrations, cake cutting, family moments, and party highlights.',
     coverImage: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80',
     deliverables: [
-      'Multi-camera 4K HD video recording',
-      'Dedicated drone camera operator for aerial shots',
-      '3-5 minute wedding teaser + full length video film',
-      'Instagram reels & WhatsApp status cuts'
+      'Full event photo and video coverage',
+      'Candid moment shots of guests and family',
+      'Highlight video reel for social media',
+      'Fast delivery of high-resolution digital album'
     ],
-    startingPrice: 35000,
-    turnaround: '2-3 Weeks',
-    badge: 'Full Video'
+    startingPrice: 8000,
+    turnaround: '3-5 Days',
+    badge: 'Celebrations'
+  },
+  {
+    id: 'service-portrait-shoot',
+    title: 'Portrait Shoot',
+    subtitle: 'Solo, Bridal & Family Portraits',
+    iconName: 'User',
+    description: 'Studio and outdoor portrait photography highlighting natural beauty, bridal attire, jewelry details, and personal modeling shoots.',
+    coverImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
+    deliverables: [
+      'Professional portrait lighting setup',
+      'Skin retouching and high-end color grading',
+      '30+ finalized high-resolution portrait photos',
+      'Ideal for modeling, bridal styling & personal memories'
+    ],
+    startingPrice: 5000,
+    turnaround: '3-5 Days',
+    badge: 'Portraits'
+  },
+  {
+    id: 'service-candid-photography',
+    title: 'Candid Photography',
+    subtitle: 'Natural Emotions & Unposed Moments',
+    iconName: 'Film',
+    description: 'Unobtrusive photography capturing authentic smiles, joyful laughter, emotional tears, and natural family interactions without posing.',
+    coverImage: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80',
+    deliverables: [
+      'Candid specialist photographer with fast prime lenses',
+      'Zero disturbance during ceremonies and celebrations',
+      'Vibrant candid gallery of genuine family emotions',
+      'High-speed digital delivery'
+    ],
+    startingPrice: 12000,
+    turnaround: '1-2 Weeks',
+    badge: 'Candid'
   },
   {
     id: 'service-heirloom-albums',
-    title: 'Wedding Photo Albums',
+    title: 'Custom Wedding Albums',
     subtitle: 'Premium Leather & Hardcover Photo Books',
     iconName: 'BookOpen',
     description: 'Custom designed wedding photo album with waterproof sheets, premium leather cover, and safe storage box for lifelong memories.',
@@ -65,46 +99,6 @@ export const SERVICES = [
     ],
     startingPrice: 8000,
     turnaround: '1-2 Weeks',
-    badge: 'Photo Book'
-  },
-  {
-    id: 'service-photo-printing-framing',
-    title: 'Wall Photo Frames & Canvas',
-    subtitle: 'Custom Frames for Living Room & Bedroom',
-    iconName: 'Sparkles',
-    description: 'Large high-definition framed photos and canvas prints ready to hang on your home walls with durable glass and wooden frames.',
-    coverImage: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80',
-    deliverables: [
-      'Premium wooden frames with clear protection glass',
-      'Vibrant long-lasting photo print quality',
-      'Available in sizes: 12x18, 16x24, 20x30 inches',
-      'Ready to hang with wall hooks'
-    ],
-    startingPrice: 3500,
-    turnaround: '3-5 Days',
-    badge: 'Home Decor'
-  },
-  {
-    id: 'service-custom-usb-pendrives',
-    title: 'Pendrive & Digital Storage',
-    subtitle: 'High-Speed USB with All Photos & Videos',
-    iconName: 'HardDrive',
-    description: 'All your high-resolution original photos and full HD videos delivered safely in a durable USB pendrive and gift box.',
-    coverImage: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80',
-    deliverables: [
-      '64GB / 128GB High-Speed USB 3.0 Pendrive',
-      'Custom wooden or crystal box with engraved names',
-      'All raw and edited master photo/video files',
-      'Easy to plug & play on Smart TVs and laptops'
-    ],
-    startingPrice: 1500,
-    turnaround: '2-3 Days',
-    badge: 'Safe Backup'
-  },
-  {
-    id: 'service-editorial-portraits',
-    title: 'Bridal & Groom Photo Shoot',
-    subtitle: 'Solo Portraits & Dress Highlights',
     iconName: 'UserCheck',
     description: 'Special close-up photo shoot for bride and groom highlighting wedding dress, jewelry, makeup, and royal solo poses.',
     coverImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',

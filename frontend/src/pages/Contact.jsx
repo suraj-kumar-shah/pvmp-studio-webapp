@@ -220,7 +220,7 @@ export const Contact = () => {
 
                 <div>
                   <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 500, color: '#374151', marginBottom: '0.3rem' }}>
-                    Package of Interest
+                    Service / Package of Interest
                   </label>
                   <select
                     value={formData.packageInterest}
@@ -237,11 +237,12 @@ export const Contact = () => {
                       outline: 'none'
                     }}
                   >
-                    <option value="Silver Wedding Package">Silver Wedding Package (2 Days Coverage)</option>
-                    <option value="Gold Wedding Package">Gold Wedding Package (2 Days Coverage)</option>
-                    <option value="Premium Wedding Package">Premium Wedding Package (2 Days Coverage)</option>
-                    <option value="Pre-Wedding Shoot">Pre-Wedding Shoot & Film</option>
-                    <option value="Custom Package">Custom Package</option>
+                    <option value="Weddings Shoot">Weddings Shoot</option>
+                    <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
+                    <option value="Birthday Party Shoot">Birthday Party Shoot</option>
+                    <option value="Portrait Shoot">Portrait Shoot</option>
+                    <option value="Candid Photography">Candid Photography</option>
+                    <option value="Custom Wedding Album">Custom Wedding Album</option>
                   </select>
                 </div>
 
@@ -251,7 +252,7 @@ export const Contact = () => {
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Tell us about your wedding..."
+                    placeholder="Tell us about your event dates, location, or requirements..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     style={{
@@ -318,10 +319,10 @@ export const Contact = () => {
                   margin: '0 0 0.4rem 0'
                 }}
               >
-                Direct Contact
+                Direct Contact & Bookings
               </h3>
               <p style={{ color: '#6b7280', fontSize: '0.88rem', margin: '0 0 1.8rem 0' }}>
-                We are available to answer any questions regarding availability and coverage.
+                Booking Open for all weddings, pre-weddings, and events across Bihar, India & Nepal.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.4rem' }}>
@@ -339,14 +340,48 @@ export const Contact = () => {
                       flexShrink: 0
                     }}
                   >
-                    <MessageCircle size={18} color="#FF5500" />
+                    <Phone size={18} color="#FF5500" />
                   </div>
                   <div>
                     <div style={{ fontSize: '0.78rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>
-                      WhatsApp & Phone
+                      Call / WhatsApp Booking
                     </div>
-                    <div style={{ color: '#111827', fontWeight: 500, fontSize: '0.9rem', marginTop: '0.2rem' }}>
-                      Online consultations and instant chat available
+                    <div style={{ marginTop: '0.3rem', display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                      <a href="tel:+916204792443" style={{ color: '#111827', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem' }}>
+                        +91 6204792443
+                      </a>
+                      <a href="tel:+917717705974" style={{ color: '#111827', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem' }}>
+                        +91 7717705974
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Studio Location */}
+                <div style={{ display: 'flex', gap: '0.9rem', alignItems: 'flex-start' }}>
+                  <div
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '8px',
+                      background: 'rgba(255, 85, 0, 0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}
+                  >
+                    <MapPin size={18} color="#FF5500" />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.78rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>
+                      Studio Location
+                    </div>
+                    <div style={{ color: '#111827', fontWeight: 600, fontSize: '0.92rem', marginTop: '0.2rem' }}>
+                      Pategna, Araria, Bihar
+                    </div>
+                    <div style={{ color: '#6b7280', fontSize: '0.8rem', marginTop: '0.1rem' }}>
+                      Available for shoots across India & Nepal
                     </div>
                   </div>
                 </div>
@@ -376,32 +411,6 @@ export const Contact = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Coverage */}
-                <div style={{ display: 'flex', gap: '0.9rem', alignItems: 'flex-start' }}>
-                  <div
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '8px',
-                      background: 'rgba(255, 85, 0, 0.1)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0
-                    }}
-                  >
-                    <MapPin size={18} color="#FF5500" />
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.78rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>
-                      Coverage
-                    </div>
-                    <div style={{ color: '#111827', fontWeight: 500, fontSize: '0.9rem', marginTop: '0.2rem' }}>
-                      Available across India & Nepal
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -419,7 +428,7 @@ export const Contact = () => {
               }}
             >
               <Clock size={16} color="#FF5500" />
-              <span>Response time: within 24 hours</span>
+              <span>Direct Booking Lines Open Now</span>
             </div>
           </div>
         </div>

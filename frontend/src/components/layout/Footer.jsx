@@ -87,27 +87,17 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
                 marginBottom: '1.4rem'
               }}
             >
-              The Collections
+              Our Services
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <li>
                 <button
-                  onClick={() => handleNav('portfolio', 'portfolio')}
+                  onClick={() => handleNav('services')}
                   style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left', transition: 'color 0.2s' }}
                   onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
                   onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
                 >
-                  Featured Stories & Portfolios
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('packages', 'packages')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Wedding & Cinema Packages
+                  Weddings Shoot
                 </button>
               </li>
               <li>
@@ -117,33 +107,53 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
                   onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
                   onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
                 >
-                  Services & Production Guide
+                  Pre-Wedding Shoot
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('about')}
+                  onClick={() => handleNav('services')}
                   style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
                   onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
                   onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
                 >
-                  Philosophy & Studio Bio
+                  Birthday Party Shoot
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('contact')}
+                  onClick={() => handleNav('services')}
                   style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
                   onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
                   onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
                 >
-                  Contact & Inquire
+                  Portrait Shoot
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNav('services')}
+                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
+                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
+                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
+                >
+                  Candid Photography
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNav('services')}
+                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
+                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
+                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
+                >
+                  Custom Wedding Albums
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Studio Concierge & Locations */}
+          {/* Col 3: Studio Location & Direct Booking */}
           <div>
             <h4
               style={{
@@ -156,24 +166,24 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
                 marginBottom: '1.4rem'
               }}
             >
-              Studio Ateliers (India & Nepal)
+              Studio Location & Booking
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#4b5563', fontSize: '0.875rem' }}>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                 <MapPin size={18} color="var(--accent-brand)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span><strong>India:</strong> 14 Heritage Court, Fort Road, Udaipur & Bandra West, Mumbai</span>
+                <span><strong>Studio:</strong> Pategna, Araria, Bihar</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                <MapPin size={18} color="var(--accent-brand)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span><strong>Nepal:</strong> Dwarika’s Heritage Complex, Battisputali, Kathmandu</span>
-              </div>
-              <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-                <Phone size={17} color="var(--accent-brand)" style={{ flexShrink: 0 }} />
-                <span>India: +91 98765 43210 | Nepal: +977 98012 34567</span>
+                <Phone size={17} color="var(--accent-brand)" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <div>
+                  <span style={{ display: 'block', fontWeight: 600, color: '#111827' }}>Booking Open:</span>
+                  <a href="tel:+916204792443" style={{ color: '#4b5563', textDecoration: 'none', display: 'block' }}>+91 6204792443</a>
+                  <a href="tel:+917717705974" style={{ color: '#4b5563', textDecoration: 'none', display: 'block' }}>+91 7717705974</a>
+                </div>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                 <Mail size={17} color="var(--accent-brand)" style={{ flexShrink: 0 }} />
-                <span>concierge@pvmpstudio.com</span>
+                <span>contact@pvmpstudio.com</span>
               </div>
             </div>
           </div>
