@@ -6,7 +6,7 @@ export const HeroSection = () => {
     <section className="hero-section">
       {/* Full Bleed Background Cover Image */}
       <img
-        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2600&q=90"
+        src="./homepage-image/homepage-backgroundimage.webp"
         alt="Wedding Photo Shoot"
         className="hero-bg-image"
       />
