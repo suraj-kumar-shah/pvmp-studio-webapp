@@ -12,7 +12,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Anshul & Ishita',
       scriptTag: 'Classic Wedding',
       location: 'Taj Lake Palace • Udaipur',
-      image: '/other-image/image1.webp',
+      image: './other-image/image1.webp',
       height: '440px'
     },
     {
@@ -20,7 +20,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Kamakhya & Avirook',
       scriptTag: 'Casual Wedding',
       location: 'Heritage Fort • Rajasthan',
-      image: '/other-image/image2.webp',
+      image: './other-image/image2.webp',
       height: '500px'
     },
     {
@@ -28,7 +28,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Subani & Abhay',
       scriptTag: 'Royal Wedding',
       location: 'Udaivilas • Udaipur',
-      image: '/other-image/image3.webp',
+      image: './other-image/image3.webp',
       height: '440px'
     },
     {
@@ -36,7 +36,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Maneet & Prabhjyot',
       scriptTag: 'Casual Wedding',
       location: 'Dwarika’s Courtyard • Kathmandu',
-      image: '/other-image/image4.webp',
+      image: './other-image/image4.webp',
       height: '500px'
     },
     {
@@ -44,7 +44,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Kriti & Sanchit',
       scriptTag: 'Classic Wedding',
       location: 'The Leela Palace • Jaipur',
-      image: '/other-image/image5.webp',
+      image: './other-image/image5.webp',
       height: '500px'
     },
     {
@@ -52,7 +52,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Riya & Aditya',
       scriptTag: 'Destination Story',
       location: 'Annapurna Vista • Nepal',
-      image: '/other-image/image6.webp',
+      image: './other-image/image6.webp',
       height: '440px'
     },
     {
@@ -60,7 +60,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Aman & Kamakshi',
       scriptTag: 'Casual Wedding',
       location: 'Umaid Bhawan • Jodhpur',
-      image: '/other-image/image7.webp',
+      image: './other-image/image7.webp',
       height: '500px'
     },
     {
@@ -68,7 +68,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Devika & Siddharth',
       scriptTag: 'Heritage Wedding',
       location: 'Patan Durbar • Kathmandu',
-      image: '/other-image/image8.webp',
+      image: './other-image/image8.webp',
       height: '440px'
     }
   ];

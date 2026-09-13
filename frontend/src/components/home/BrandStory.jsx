@@ -34,12 +34,12 @@ export const BrandStory = ({ setActivePage }) => {
               }}
             >
               <img
-                src="/other-image/image4.webp"
-                alt="PVMP Studio Luxury Wedding Photography"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                src="./other-image/image4.webp"
+                alt="PVMP Studio founder with camera"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }}
                 loading="lazy"
                 onError={(e) => {
-                  e.currentTarget.src = '/other-images/image4.webp';
+                  e.currentTarget.src = './other-image/image4.webp';
                 }}
               />
             </div>
