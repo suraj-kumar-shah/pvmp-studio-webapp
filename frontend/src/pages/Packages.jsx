@@ -107,7 +107,7 @@ export const Packages = ({ setActivePage, setSelectedPackageId }) => {
               centered
               eyebrow="Side-by-Side Matrix"
               title="Compare Wedding Collection Inclusions"
-              subtitle="Evaluate crew size, albums, drone coverage, and deliverable timelines across our tiers."
+              subtitle="Evaluate crew size, albums, drone coverage, and deliverable timelines across our collections."
             />
 
             <PackageComparison

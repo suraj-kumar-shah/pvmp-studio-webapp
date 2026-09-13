@@ -12,7 +12,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Anshul & Ishita',
       scriptTag: 'Classic Wedding',
       location: 'Taj Lake Palace • Udaipur',
-      image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image1.webp',
       height: '440px'
     },
     {
@@ -20,7 +20,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Kamakhya & Avirook',
       scriptTag: 'Casual Wedding',
       location: 'Heritage Fort • Rajasthan',
-      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image2.webp',
       height: '500px'
     },
     {
@@ -28,7 +28,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Subani & Abhay',
       scriptTag: 'Royal Wedding',
       location: 'Udaivilas • Udaipur',
-      image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image3.webp',
       height: '440px'
     },
     {
@@ -36,7 +36,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Maneet & Prabhjyot',
       scriptTag: 'Casual Wedding',
       location: 'Dwarika’s Courtyard • Kathmandu',
-      image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image4.webp',
       height: '500px'
     },
     {
@@ -44,7 +44,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Kriti & Sanchit',
       scriptTag: 'Classic Wedding',
       location: 'The Leela Palace • Jaipur',
-      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image5.webp',
       height: '500px'
     },
     {
@@ -52,7 +52,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Riya & Aditya',
       scriptTag: 'Destination Story',
       location: 'Annapurna Vista • Nepal',
-      image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image6.webp',
       height: '440px'
     },
     {
@@ -60,7 +60,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Aman & Kamakshi',
       scriptTag: 'Casual Wedding',
       location: 'Umaid Bhawan • Jodhpur',
-      image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image7.webp',
       height: '500px'
     },
     {
@@ -68,7 +68,7 @@ export const FeaturedWork = ({ setActivePage, setSelectedProjectId }) => {
       couple: 'Devika & Siddharth',
       scriptTag: 'Heritage Wedding',
       location: 'Patan Durbar • Kathmandu',
-      image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1600&q=90',
+      image: '/other-image/image8.webp',
       height: '440px'
     }
   ];

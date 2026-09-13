@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ShoppingBag, Menu, Globe, ChevronDown, Sparkles } from 'lucide-react';
+import { ShoppingBag, Menu, Globe, ChevronDown, Sparkles, Calendar, MessageSquare } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import MobileMenu from './MobileMenu';
+import QuickBookingModal from '../common/QuickBookingModal';
 
 export const Header = ({ activePage, setActivePage, setSelectedProjectId, setSelectedPackageId, setSelectedProductId }) => {
   const { totalItemsCount, setIsCartOpen, currency, setCurrency, currencies } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
+  const [isQuickBookingOpen, setIsQuickBookingOpen] = useState(false);
   const currencyDropdownRef = useRef(null);
 
   useEffect(() => {
@@ -285,40 +287,42 @@ export const Header = ({ activePage, setActivePage, setSelectedProjectId, setSel
               )}
             </button>
 
-            {/* Book Now CTA (Signature Color & Simple Text) */}
+            {/* Book Session CTA (Opens Interactive Date & Availability Modal) */}
             <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => setIsQuickBookingOpen(true)}
               className="desktop-inquire-btn"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '0.55rem 1.35rem',
+                gap: '0.4rem',
+                padding: '0.55rem 1.25rem',
                 backgroundColor: 'var(--accent-brand)',
                 color: '#ffffff',
                 fontFamily: 'var(--font-sans)',
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                letterSpacing: '0.04em',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                letterSpacing: '0.03em',
                 whiteSpace: 'nowrap',
-                borderRadius: '6px',
+                borderRadius: '8px',
                 border: 'none',
                 cursor: 'pointer',
-                transition: 'all 0.25s ease',
-                boxShadow: '0 2px 8px rgba(255, 85, 0, 0.25)'
+                transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
+                boxShadow: '0 2px 10px rgba(10, 102, 194, 0.3)'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = 'var(--accent-brand-hover)';
                 e.currentTarget.style.transform = 'translateY(-1px)';
-                e.currentTarget.style.boxShadow = '0 4px 14px rgba(255, 85, 0, 0.35)';
+                e.currentTarget.style.boxShadow = '0 6px 18px rgba(10, 102, 194, 0.4)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'var(--accent-brand)';
                 e.currentTarget.style.transform = 'none';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 85, 0, 0.25)';
+                e.currentTarget.style.boxShadow = '0 2px 10px rgba(10, 102, 194, 0.3)';
               }}
             >
-              Book Now
+              <Calendar size={15} />
+              <span>Book Session</span>
             </button>
 
             {/* Mobile Hamburger Drawer Trigger */}
@@ -343,46 +347,14 @@ export const Header = ({ activePage, setActivePage, setSelectedProjectId, setSel
             </button>
           </div>
         </div>
-
-        {/* Expanded Layered Organic Wave Transition at Bottom of Navigation */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-64px',
-            left: 0,
-            right: 0,
-            width: '100%',
-            height: '65px',
-            pointerEvents: 'none',
-            overflow: 'visible',
-            zIndex: 10
-          }}
-        >
-          <svg
-            viewBox="0 0 1440 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            style={{ width: '100%', height: '100%', display: 'block' }}
-          >
-            {/* Deep Back Translucent Layer */}
-            <path
-              d="M0,50 C260,105 540,15 880,95 C1160,125 1340,45 1440,75 L1440,0 L0,0 Z"
-              fill="rgba(255, 255, 255, 0.38)"
-            />
-            {/* Middle Translucent Layer */}
-            <path
-              d="M0,30 C300,80 620,20 960,70 C1220,105 1380,35 1440,50 L1440,0 L0,0 Z"
-              fill="rgba(255, 255, 255, 0.75)"
-            />
-            {/* Front Solid Pure White Layer */}
-            <path
-              d="M0,0 C360,55 720,5 1060,45 C1260,65 1380,22 1440,28 L1440,0 L0,0 Z"
-              fill="#ffffff"
-            />
-          </svg>
-        </div>
       </header>
+
+      {/* Interactive Quick Booking & Date Availability Modal */}
+      <QuickBookingModal
+        isOpen={isQuickBookingOpen}
+        onClose={() => setIsQuickBookingOpen(false)}
+        setActivePage={handleNavClick}
+      />
 
       {/* Mobile Drawer */}
       <MobileMenu
@@ -391,6 +363,7 @@ export const Header = ({ activePage, setActivePage, setSelectedProjectId, setSel
         activePage={activePage}
         setActivePage={handleNavClick}
         onOpenCart={() => setIsCartOpen(true)}
+        onOpenQuickBooking={() => setIsQuickBookingOpen(true)}
       />
 
       <style>{`

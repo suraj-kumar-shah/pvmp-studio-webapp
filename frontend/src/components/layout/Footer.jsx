@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Award, ArrowUp, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Award, ArrowUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
 export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackageId, setSelectedProductId }) => {
@@ -29,12 +29,11 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
   return (
     <footer
       style={{
-        backgroundColor: '#f8f9fa',
-        borderTop: '1px solid #e5e7eb',
-        paddingTop: '5rem',
+        backgroundColor: '#0A66C2',
+        color: '#ffffff',
+        paddingTop: '4.5rem',
         paddingBottom: '2.5rem',
-        position: 'relative',
-        color: '#111827'
+        position: 'relative'
       }}
     >
       <div className="container">
@@ -43,20 +42,20 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '3.5rem',
-            marginBottom: '4.5rem'
+            gap: '3rem',
+            marginBottom: '4rem'
           }}
         >
           {/* Col 1: Brand & Philosophy */}
-          <div style={{ maxWidth: '320px' }}>
-            <div style={{ marginBottom: '1.2rem' }}>
+          <div style={{ maxWidth: '340px' }}>
+            <div style={{ marginBottom: '1rem' }}>
               <span
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontSize: '1.85rem',
-                  letterSpacing: '0.12em',
+                  fontSize: '1.9rem',
+                  letterSpacing: '0.1em',
                   fontWeight: 600,
-                  color: 'var(--accent-brand)',
+                  color: '#ffffff',
                   display: 'block'
                 }}
               >
@@ -64,12 +63,25 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
               </span>
             </div>
 
-            <p style={{ fontSize: '0.875rem', color: '#4b5563', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.88rem', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.65, marginBottom: '1.4rem' }}>
               Crafting timeless visual heirlooms and cinema-grade wedding documentaries for discerning families across India and Nepal.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--accent-brand)', fontSize: '0.8rem', fontWeight: 600 }}>
-              <Award size={18} />
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.55rem',
+                background: 'rgba(255, 255, 255, 0.12)',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
+                padding: '0.4rem 0.85rem',
+                borderRadius: '9999px',
+                color: '#ffffff',
+                fontSize: '0.76rem',
+                fontWeight: 600
+              }}
+            >
+              <Award size={15} color="#ffffff" />
               <span>Ranked Top Luxury Wedding Studio 2024</span>
             </div>
           </div>
@@ -79,77 +91,51 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
             <h4
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontSize: '0.825rem',
+                fontSize: '0.8rem',
                 fontWeight: 700,
-                letterSpacing: '0.14em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#111827',
-                marginBottom: '1.4rem'
+                color: '#ffffff',
+                marginBottom: '1.25rem'
               }}
             >
               Our Services
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Weddings Shoot
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Pre-Wedding Shoot
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Birthday Party Shoot
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Portrait Shoot
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Candid Photography
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('services')}
-                  style={{ color: '#4b5563', fontSize: '0.9rem', textAlign: 'left' }}
-                  onMouseEnter={(e) => (e.target.style.color = 'var(--accent-brand)')}
-                  onMouseLeave={(e) => (e.target.style.color = '#4b5563')}
-                >
-                  Custom Wedding Albums
-                </button>
-              </li>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+              {[
+                { label: 'Wedding Photography', page: 'services' },
+                { label: 'Pre-Wedding & Teasers', page: 'services' },
+                { label: 'Cinematography Films', page: 'services' },
+                { label: 'Editorial Portraits', page: 'services' },
+                { label: 'Events & Celebrations', page: 'services' },
+                { label: 'Handcrafted Albums', page: 'packages' }
+              ].map((item, idx) => (
+                <li key={idx}>
+                  <button
+                    onClick={() => handleNav(item.page)}
+                    style={{
+                      color: 'rgba(255, 255, 255, 0.85)',
+                      fontSize: '0.88rem',
+                      textAlign: 'left',
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = '#ffffff';
+                      e.currentTarget.style.transform = 'translateX(4px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = 'rgba(255, 255, 255, 0.85)';
+                      e.currentTarget.style.transform = 'none';
+                    }}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -158,32 +144,42 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
             <h4
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontSize: '0.825rem',
+                fontSize: '0.8rem',
                 fontWeight: 700,
-                letterSpacing: '0.14em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#111827',
-                marginBottom: '1.4rem'
+                color: '#ffffff',
+                marginBottom: '1.25rem'
               }}
             >
               Studio Location & Booking
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#4b5563', fontSize: '0.875rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'rgba(255, 255, 255, 0.9)', fontSize: '0.88rem' }}>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                <MapPin size={18} color="var(--accent-brand)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span><strong>Studio:</strong> Pategna, Araria, Bihar</span>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                  <MapPin size={14} color="#ffffff" />
+                </div>
+                <span><strong>Studio:</strong> Pategna, Araria, Bihar (Serving India & Nepal)</span>
               </div>
+
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                <Phone size={17} color="var(--accent-brand)" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                  <Phone size={14} color="#ffffff" />
+                </div>
                 <div>
-                  <span style={{ display: 'block', fontWeight: 600, color: '#111827' }}>Booking Open:</span>
-                  <a href="tel:+916204792443" style={{ color: '#4b5563', textDecoration: 'none', display: 'block' }}>+91 6204792443</a>
-                  <a href="tel:+917717705974" style={{ color: '#4b5563', textDecoration: 'none', display: 'block' }}>+91 7717705974</a>
+                  <span style={{ display: 'block', fontWeight: 600, color: '#ffffff' }}>Direct Booking:</span>
+                  <a href="tel:+916204792443" style={{ color: 'rgba(255, 255, 255, 0.9)', textDecoration: 'none', display: 'block', marginTop: '1px' }}>+91 6204792443</a>
+                  <a href="tel:+917717705974" style={{ color: 'rgba(255, 255, 255, 0.9)', textDecoration: 'none', display: 'block' }}>+91 7717705974</a>
                 </div>
               </div>
+
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-                <Mail size={17} color="var(--accent-brand)" style={{ flexShrink: 0 }} />
-                <span>contact@pvmpstudio.com</span>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <Mail size={14} color="#ffffff" />
+                </div>
+                <a href="mailto:contact@pvmpstudio.com" style={{ color: 'rgba(255, 255, 255, 0.9)', textDecoration: 'none' }}>
+                  contact@pvmpstudio.com
+                </a>
               </div>
             </div>
           </div>
@@ -193,51 +189,72 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
             <h4
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontSize: '0.825rem',
+                fontSize: '0.8rem',
                 fontWeight: 700,
-                letterSpacing: '0.14em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#111827',
-                marginBottom: '1.4rem'
+                color: '#ffffff',
+                marginBottom: '1.25rem'
               }}
             >
               Private Journal
             </h4>
-            <p style={{ fontSize: '0.85rem', color: '#4b5563', marginBottom: '1.2rem', lineHeight: 1.6 }}>
-              Receive exclusive wedding styling guides, date availability updates, and new print release previews.
+            <p style={{ fontSize: '0.86rem', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '1.1rem', lineHeight: 1.55 }}>
+              Receive exclusive wedding styling guides, date availability updates, and new gallery releases.
             </p>
 
             {isSubscribed ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-brand)', fontSize: '0.85rem', fontWeight: 600 }}>
-                <CheckCircle2 size={18} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ffffff', fontSize: '0.85rem', fontWeight: 600, background: 'rgba(255, 255, 255, 0.15)', padding: '0.8rem', borderRadius: '8px' }}>
+                <CheckCircle2 size={18} color="#ffffff" />
                 <span>You are subscribed to the PVMP Journal.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                 <input
                   type="email"
                   placeholder="Enter your email address"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   style={{
-                    padding: '0.8rem 1rem',
+                    padding: '0.75rem 0.95rem',
                     background: '#ffffff',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '4px',
-                    color: '#111827',
-                    fontSize: '0.85rem',
+                    border: 'none',
+                    borderRadius: '8px',
+                    color: '#0f172a',
+                    fontSize: '0.86rem',
                     outline: 'none',
-                    transition: 'border-color 0.2s'
+                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.08)'
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = 'var(--accent-brand)')}
-                  onBlur={(e) => (e.target.style.borderColor = '#d1d5db')}
                 />
                 <button
                   type="submit"
-                  className="btn-primary"
-                  style={{ padding: '0.75rem 1.4rem', fontSize: '0.78rem' }}
+                  style={{
+                    padding: '0.75rem 1.4rem',
+                    fontSize: '0.82rem',
+                    fontWeight: 700,
+                    background: '#0A66C2',
+                    color: '#ffffff',
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
+                    transition: 'all 0.2s ease',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.45rem'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#004182';
+                    e.currentTarget.style.transform = 'translateY(-1px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#0A66C2';
+                    e.currentTarget.style.transform = 'none';
+                  }}
                 >
-                  Join Private List
+                  <span>Join Private List</span>
+                  <ArrowRight size={14} />
                 </button>
               </form>
             )}
@@ -247,15 +264,15 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
         {/* Bottom Bar */}
         <div
           style={{
-            borderTop: '1px solid #e5e7eb',
-            paddingTop: '2rem',
+            borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+            paddingTop: '1.8rem',
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-between',
             alignItems: 'center',
             gap: '1rem',
             fontSize: '0.8rem',
-            color: '#6b7280'
+            color: 'rgba(255, 255, 255, 0.8)'
           }}
         >
           <div>
@@ -265,17 +282,17 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
             <button
               onClick={() => handleNav('contact')}
-              style={{ color: '#6b7280', fontSize: '0.8rem' }}
-              onMouseEnter={(e) => (e.target.style.color = '#ff6600')}
-              onMouseLeave={(e) => (e.target.style.color = '#6b7280')}
+              style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.8rem', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+              onMouseEnter={(e) => (e.target.style.color = '#ffffff')}
+              onMouseLeave={(e) => (e.target.style.color = 'rgba(255, 255, 255, 0.85)')}
             >
               Privacy Policy
             </button>
             <button
               onClick={() => handleNav('contact')}
-              style={{ color: '#6b7280', fontSize: '0.8rem' }}
-              onMouseEnter={(e) => (e.target.style.color = '#ff6600')}
-              onMouseLeave={(e) => (e.target.style.color = '#6b7280')}
+              style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.8rem', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+              onMouseEnter={(e) => (e.target.style.color = '#ffffff')}
+              onMouseLeave={(e) => (e.target.style.color = 'rgba(255, 255, 255, 0.85)')}
             >
               Terms of Commission
             </button>
@@ -286,13 +303,27 @@ export const Footer = ({ setActivePage, setSelectedProjectId, setSelectedPackage
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.35rem',
-                color: '#ff6600',
+                color: '#ffffff',
                 fontSize: '0.8rem',
-                fontWeight: 600
+                fontWeight: 700,
+                background: 'rgba(255, 255, 255, 0.15)',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
+                padding: '0.35rem 0.75rem',
+                borderRadius: '9999px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#ffffff';
+                e.currentTarget.style.color = '#0A66C2';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                e.currentTarget.style.color = '#ffffff';
               }}
             >
               <span>Back to Top</span>
-              <ArrowUp size={14} />
+              <ArrowUp size={13} />
             </button>
           </div>
         </div>

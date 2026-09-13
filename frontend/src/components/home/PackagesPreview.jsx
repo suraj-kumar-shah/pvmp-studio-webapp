@@ -67,7 +67,7 @@ export const PackagesPreview = ({ setActivePage, setSelectedPackageId }) => {
             className="btn-secondary"
             style={{ padding: '0.9rem 2.5rem' }}
           >
-            <span>Compare All Packages & Custom Destination Tiers</span>
+            <span>Compare All Packages & Custom Collections</span>
             <ArrowRight size={16} />
           </button>
         </div>

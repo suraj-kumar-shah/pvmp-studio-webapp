@@ -7,7 +7,8 @@ export const MobileMenu = ({
   onClose,
   activePage,
   setActivePage,
-  onOpenCart
+  onOpenCart,
+  onOpenQuickBooking
 }) => {
   const { totalItemsCount, currency, setCurrency, currencies } = useCart();
 
@@ -42,7 +43,7 @@ export const MobileMenu = ({
       }}
     >
       {/* Top Bar */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', letterSpacing: '0.12em', color: 'var(--accent-brand)', fontWeight: 600 }}>
             PVMP STUDIO
@@ -68,8 +69,36 @@ export const MobileMenu = ({
         </button>
       </div>
 
+      {/* Book Session CTA for Mobile */}
+      <button
+        onClick={() => {
+          onClose();
+          onOpenQuickBooking?.();
+        }}
+        style={{
+          width: '100%',
+          padding: '0.85rem 1.2rem',
+          backgroundColor: 'var(--accent-brand)',
+          color: '#ffffff',
+          borderRadius: '8px',
+          fontFamily: 'var(--font-sans)',
+          fontSize: '0.9rem',
+          fontWeight: 700,
+          border: 'none',
+          cursor: 'pointer',
+          marginBottom: '1.8rem',
+          boxShadow: '0 4px 14px rgba(10, 102, 194, 0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.5rem'
+        }}
+      >
+        <span>⚡ Instant Date Check & Booking</span>
+      </button>
+
       {/* Nav List */}
-      <nav style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', marginBottom: '2.5rem' }}>
+      <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
         {navLinks.map((item) => {
           const isActive = activePage === item.id;
           return (
@@ -84,7 +113,7 @@ export const MobileMenu = ({
                 borderBottom: '1px solid #f3f4f6',
                 color: isActive ? 'var(--accent-brand)' : '#111827',
                 fontFamily: 'var(--font-serif)',
-                fontSize: '1.55rem',
+                fontSize: '1.45rem',
                 fontWeight: isActive ? 600 : 400,
                 textAlign: 'left'
               }}

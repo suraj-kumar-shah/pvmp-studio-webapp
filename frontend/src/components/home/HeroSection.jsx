@@ -1,28 +1,54 @@
 import React from 'react';
 import '../../styles/components/HeroSection.css';
 
-export const HeroSection = () => {
+export const HeroSection = ({ setActivePage, setSelectedProjectId }) => {
+  const marqueeItems = [
+    'WEDDING PHOTOGRAPHY',
+    'LUXURY PORTRAITURE',
+    'BRAND IDENTITY',
+    'ROYAL CINEMATOGRAPHY',
+    'DESTINATION WEDDINGS',
+    'EDITORIAL FASHION',
+    'FINE ART ALBUMS',
+    'PRE-WEDDING SHOOTS'
+  ];
+
   return (
-    <section className="hero-section">
-      {/* Full Bleed Background Cover Image */}
-      <img
-        src="./homepage-image/homepage-backgroundimage.webp"
-        alt="Wedding Photo Shoot"
-        className="hero-bg-image"
-      />
+    <section className="dark-editorial-hero" aria-label="PVMP Studio Luxury Photography">
+      {/* Main Hero Visual Stage */}
+      <div className="hero-visual-stage">
+        {/* Ambient Warm Amber Glow */}
+        <div className="hero-ambient-glow"></div>
 
-      {/* Subtle Cinematic Contrast Overlay */}
-      <div className="hero-overlay">
-        <div className="hero-content">
-          {/* Master Headline */}
-          <h1 className="hero-headline">
-            Wedding Photo Shoot
-          </h1>
+        {/* Centered Photographer Portrait */}
+        <div className="hero-portrait-wrapper">
+          <img
+            src="./homepage-image/homepage-photographer.jpg"
+            alt="Lead Creative Director and Master Photographer - PVMP Studio"
+            className="hero-portrait-img"
+            loading="eager"
+            onError={(e) => {
+              e.currentTarget.src = './homepage-image/homepage-backgroundimage.webp';
+            }}
+          />
+        </div>
 
-          {/* Professional Editorial Narrative Without Dot */}
-          <p className="hero-subtitle">
-            PVMP Studio Luxury Destination Wedding Photography, Royal Cinematography, and Heirloom Visual Storytelling Across India and Nepal
-          </p>
+        {/* Huge Bold Split Studio Typography Flanking the Photographer */}
+        <div className="hero-split-brand-lockup">
+          <span className="hero-brand-word hero-brand-left">PVMP</span>
+          <span className="hero-brand-word hero-brand-right">STUDIO</span>
+        </div>
+
+        {/* Dynamic Infinite Ticker / Marquee Running After PVMP STUDIO Text */}
+        <div className="hero-marquee-container">
+          <div className="hero-marquee-track">
+            {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((text, idx) => (
+              <span key={idx} className="hero-marquee-item">
+                <span className="marquee-dot">•</span>
+                {text}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

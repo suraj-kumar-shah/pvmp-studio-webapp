@@ -208,7 +208,7 @@ export const PackageDetails = ({ packageId, setActivePage, setSelectedPackageId 
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. Jagmandir Palace, Udaipur or Grand Hyatt Goa"
+                    placeholder="City, venue, or special requests..."
                     value={specialNotes}
                     onChange={(e) => setSpecialNotes(e.target.value)}
                     style={{

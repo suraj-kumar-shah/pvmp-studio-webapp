@@ -300,7 +300,7 @@ export const CartSummary = ({ isDrawer = false, onCheckoutComplete }) => {
                     <input
                       required
                       type="text"
-                      placeholder="e.g. Kabir Mehta"
+                      placeholder="Enter full name"
                       value={customerInfo.fullName}
                       onChange={(e) => setCustomerInfo({ ...customerInfo, fullName: e.target.value })}
                       style={{
@@ -321,7 +321,7 @@ export const CartSummary = ({ isDrawer = false, onCheckoutComplete }) => {
                     <input
                       required
                       type="email"
-                      placeholder="e.g. kabir@mehta.com"
+                      placeholder="name@example.com"
                       value={customerInfo.email}
                       onChange={(e) => setCustomerInfo({ ...customerInfo, email: e.target.value })}
                       style={{
@@ -345,7 +345,7 @@ export const CartSummary = ({ isDrawer = false, onCheckoutComplete }) => {
                     <input
                       required
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="Contact number with country code"
                       value={customerInfo.phone}
                       onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
                       style={{

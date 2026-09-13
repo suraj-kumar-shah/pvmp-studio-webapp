@@ -16,6 +16,10 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .faq-two-col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem !important;
+  }
 }
 
 @media (max-width: 768px) {

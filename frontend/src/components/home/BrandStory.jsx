@@ -34,9 +34,13 @@ export const BrandStory = ({ setActivePage }) => {
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=85"
+                src="/other-image/image4.webp"
                 alt="PVMP Studio Luxury Wedding Photography"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.src = '/other-images/image4.webp';
+                }}
               />
             </div>
           </div>
