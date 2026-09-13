@@ -1,0 +1,100 @@
+/* ==========================================================================
+   PVMP Studio - Direct Floating WhatsApp Button & Authentic Logo
+   ========================================================================== */
+
+.whatsapp-floating-container {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+}
+
+/* Tooltip on Hover */
+.whatsapp-tooltip {
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  animation: whatsappTooltipIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #0f172a;
+}
+
+/* Floating WhatsApp Circular Button */
+.whatsapp-floating-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.whatsapp-floating-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  background: #20ba56;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-floating-btn:active {
+  transform: scale(0.96);
+}
+
+.whatsapp-svg-logo {
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.whatsapp-floating-btn:hover .whatsapp-svg-logo {
+  transform: scale(1.05);
+}
+
+@keyframes whatsappTooltipIn {
+  from {
+    opacity: 0;
+    transform: translateX(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-floating-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-floating-btn {
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-svg-logo {
+    width: 30px;
+    height: 30px;
+  }
+}

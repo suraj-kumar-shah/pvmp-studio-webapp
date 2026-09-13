@@ -4,6 +4,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import CartDrawer from './components/cart/CartDrawer';
 import Toast from './components/common/Toast';
+import WhatsAppChatbot from './components/common/WhatsAppChatbot';
 
 // Pages
 import Home from './pages/Home';
@@ -139,6 +140,9 @@ function MainApp() {
 
       {/* Global Toast Notification */}
       <Toast />
+
+      {/* Global WhatsApp Chatbot Widget */}
+      <WhatsAppChatbot />
 
       {/* Luxury Footer */}
       <Footer
